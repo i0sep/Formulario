@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+    <body>
+        <h1>Formulario HTML</h1>
+        <form action="#" method="post" name="from1" >
+            
+            <fieldset>
+                <legend>Formulario: </legend>
+
+                <!--Casilla de texto-->
+                <label for="nombre">Escribe tu nombre:</label>
+                <input type="text" name="nombre" id="nombre" size="20" maxlength="20" required>
+                <br>
+                
+                <!--Casilla de texto para mensaje-->
+                <label for="mensaje">Mensaje: </label>
+                <input type="text" name="mensaje" id="mensaje" size="40" maxlength="40" placeholder="Escribe un mensaje">
+                <br>
+                
+                <!--Casilla de password-->
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" name="contrasenia" size="8" maxlength="10" required>
+                <br><br>
+                
+
+                <!--Casilla de elección de edad (2 opciones)-->
+                Elige la edad que tengas: <br>
+                <input type="radio" name="edad" id="menor" value="0-17"> <label for="menor">0-17</label>
+                <br>
+                <input type="radio" name="edad" id="mayor" value="18" checked> <label for="mayor">18 o más</label>
+                <br><br>
+                
+                <!--Casilla de elección de provincia (5 opciones)-->
+                Elige tu provincia: <br>
+                <input type="radio" name="provincias" id="CR" value="Ciudad Real"> <label for="provincias">Ciudad Real</label>
+                <input type="radio" name="provincias" id="ALB" value="Albacete"> <label for="provincias">Albacete</label>
+                <input type="radio" name="provincias" id="CNC" value="Cuenca"> <label for="provincias">Cuenca</label>
+                <input type="radio" name="provincias" id="TLD" value="Toledo"> <label for="provincias">Toledo</label>
+                <input type="radio" name="provincias" id="GU" value="Ciudad Real"> <label for="provincias">Guadalajara</label>
+                <br> <br>
+
+
+                <!--Casilla para marcar varias elecciones-->
+                Modulos convalidados: <br>
+                <input type="checkbox" name="modulos" value="BBDD" id="BBDD"> <label for="BBDD">Base de Datos</label>
+                <br>
+                <input type="checkbox" name="modulos" value="LGM" id="LGM"> <label for="LGM">Lenguaje de marcas</label>
+                <br>
+                <input type="checkbox" name="modulos" value="PRG" id="PRG"> <label for="PRG">Programación</label>
+                <br>
+                <input type="checkbox" name="modulos" value="SISI" id="SISI"> <label for="SISI">Sistemas Informáticos</label>
+                <br><br>
+
+
+                <!--Casilla que despliega opciones-->
+                <label for="ciclo">Ciclo matriculado:</label>
+                <select name="ciclo" id="ciclo">
+                    <option value="#" selected disabled>Elige un ciclo...</option>
+                    <option value="asir">ASIR</option>
+                    <option value="dam">DAM</option>
+                    <option value="daw" >DAW</option>
+                </select> <br><br>
+                
+                <!--Casilla de texto amplia (ampliable) para poner mas texto-->
+                <textarea name="ea" id="ea" placeholder="Escribe lo que quieras" rows="5" cols="20"></textarea>
+                <hr>
+
+                
+                <!--Casilla que autcompleta ciertas opciones-->
+                <label for="poblacion">Escribe una población</label>
+                <input type="text" id="poblacion" list="lista" name="poblacion">
+                <datalist id="lista">
+                    <option value="Valdepeñas"></option>
+                    <option value="Membrilla"></option>
+                    <option value="Manzanares"></option>
+                    <option value="Ocaña"></option>
+                </datalist>
+                <br>
+
+
+                <!--Barra gradiante para marcar una serie de valores los cuales tienen mínimo y máximo-->
+                <label for="rango">Grado de satisfacción del curso</label>
+                <br>
+                0<input type="range" name="satisfaccion" id="rango" min="0" max="100" value="50" oninput="valueRange.value=this.value">100
+                <br>
+                <label for="valueRange">Valor seleccionado: <output name="valorRango" id="valueRange"> 50 </output>   </label>
+            
+            </fieldset>
+
+            <fieldset>
+                <label for="colour">Escoge tu color favorito: </label>
+                <input type="color" name="color" id="colour">
+                <br>
+
+                <label for="date">Cuando es tu cumpleaños: </label>
+                <input type="date" name="fecha" id="date">
+                <br>
+
+                <label for="datetime">Que hora es ahora: </label>
+                <input type="datetime-local" name="hora" id="datetime">
+
+
+            </fieldset>
+            <!--Añadir: color date datetime-local email month number search tel time url week-->
+
+
+
+<br><br>
+            <input type="button" value="ALT-F4" onclick="window.close();">          
+            <button type="button" onclick="alert('Sorpresa')">HAZME CLICK!</button>
+
+
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+            
+        </form>
+    </body>
+</html>
